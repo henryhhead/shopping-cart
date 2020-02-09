@@ -1,7 +1,5 @@
 # shopping_cart.py
 
-#from pprint import pprint
-
 import datetime as dt
 TAX_RATE = 0.06 #Washington, DC Sales tax rate
 
@@ -28,17 +26,10 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
-# TODO: write some Python code here to produce the desired output
-#print(products)
-# pprint(products)
-
-
-
 #
 #INFO CAPTURE INPUT
 #
 
-#checkout_start_at = dt.datetime.now() #current date and time
 checkout_start_at = dt.datetime.now()
 subtotal_price = 0
 selected_ids = []
@@ -77,7 +68,7 @@ for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"])== str(selected_id)]
     matching_product = matching_products[0]
     subtotal_price = subtotal_price + matching_product["price"]
-    print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+    print(" ... " + matching_product["name"] + " " + str(matching_product["price"]))
 
 
 tax = subtotal_price * TAX_RATE
@@ -91,8 +82,6 @@ print("TOTAL: " + to_usd(total_price))
 print("---------------------------------")
 print("THANK YOU FOR SHOPPING AT HENRY'S GROCERY")
 print("---------------------------------")
-
-#print("TOTAL PRICE:" + str(total_price)) #format as USD
 
 
 
