@@ -39,6 +39,7 @@ products = [
 #
 
 #checkout_start_at = dt.datetime.now() #current date and time
+checkout_start_at = dt.datetime.now()
 subtotal_price = 0
 selected_ids = []
 
@@ -61,6 +62,8 @@ while True:
 print("--------------------------------")
 print("HENRY'S GROCERY")
 print("WWW.HENRYS-GROCERY.COM")
+print("--------------------------------")
+print("CHECKOUT AT: " + checkout_start_at.strftime("%Y-%m-%d %I:%M %p")) # datetime formatting
 print("--------------------------------")
 
 
