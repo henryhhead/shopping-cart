@@ -33,18 +33,25 @@ products = [
 checkout_start_at = dt.datetime.now()
 subtotal_price = 0
 selected_ids = []
-
+options = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
 
 
 total_price = 0
 selected_ids = []
 while True:
     selected_id = input("Please input a product identifier: ") #> "9" (string)
-
     if selected_id == "DONE":
-       break
+        break
     else:
-        selected_ids.append(selected_id)
+        if selected_id in options:
+            selected_ids.append(selected_id)
+        else:
+            print("....................")
+            print("OOPS- INVALID INPUT.")
+            print("....................")
+            print("PLEASE TRY AGAIN.")
+            print("....................")
+            break
 
 #
 #INFO DISPLAY / OUTPUT
